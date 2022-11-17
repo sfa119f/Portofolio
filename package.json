@@ -1,0 +1,15 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "This is Syarifuddin's web portfolio made using Html, Javascript, and Tailwindcss",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
