@@ -10,4 +10,4 @@ This is Syarifuddin's web portfolio made using Html, Javascript, and Tailwindcss
   - Download and extract all files in this repository
   - Open `public/index.html` using your browser
 * Cara 2: 
-  - Buka https://sfa119f.github.io/portofolio/public/index.html
+  - Buka https://sfa119f.github.io/Portofolio/public/index.html
