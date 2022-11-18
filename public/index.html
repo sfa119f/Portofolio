@@ -15,10 +15,11 @@
   <nav 
     id="navbar" 
     style="top: 0" 
-    class="fixed w-full h-20 bg-navy-dark/[0.9] transition-all duration-500 z-10">
+    class="fixed w-full h-20 bg-navy-dark/[0.9] transition-all duration-500 z-10"
+  >
     <div class="flex items-center justify-between py-6 px-6 md:px-12">
       <img src="../src/img/logo.png" alt="logo" style="height: 2rem;">
-      <div class="hidden md:flex gap-4">
+      <div class="hidden md:flex gap-8">
         <a class="hover:text-green-neon" href="#about">About</a>
         <a class="hover:text-green-neon" href="#work">Work</a>
         <a class="hover:text-green-neon" href="#experience">Experience</a>
@@ -29,14 +30,17 @@
         <i class="fas fa-bars text-green-neon" style="font-size: 2rem;"></i>
       </div>
       <div 
-      id="sideNavbar" 
-      class="hidden md:hidden right-0 min-w-fit w-3/5 -top-0.5 h-screen py-5 px-6 bg-navy">
-      <div class="flex flex-col gap-4">
-        <i 
-          class="fas fa-xmark text-green-neon cursor-pointer" 
-          style="font-size: 2rem;" 
-          onclick="showSideNavbar()">
-        </i>
+        id="sideNavbar" 
+        onclick="showSideNavbar()"
+        class="hidden md:hidden right-0 min-w-fit w-3/5 -top-0.5 h-full py-5 px-6 bg-navy
+          transition-all duration-500"
+      >
+        <div class="flex flex-col gap-4">
+          <i 
+            class="fas fa-xmark text-green-neon cursor-pointer" 
+            style="font-size: 2rem;" 
+          >
+          </i>
           <a class="hover:text-green-neon" href="#about">About</a>
           <a class="hover:text-green-neon" href="#work">Work</a>
           <a class="hover:text-green-neon" href="#experience">Experience</a>
@@ -48,18 +52,22 @@
   </nav>
   <div class="h-20"></div>
   <main class="top-20 px-6 sm:px-12 md:px-24 xl:px-48 max-w-[1440px] w-full min-h-full mx-auto">
-    <section id="title" class="mt-4 mb-12 min-h-[calc(100%-7rem)] flex flex-col justify-center">
-      <div class="text-green-neon my-2">Hi everyone! My name is</div>
-      <div class="text-night-light font-bold text-5xl my-2">Syarifuddin Fakhri A.</div>
+    <section id="title" class="pt-4 pb-4 min-h-[calc(100%-5rem)] flex flex-col justify-center">
+      <div class="text-lg text-green-neon my-2">Hi everyone! My name is</div>
+      <div class="text-5xl text-night-light font-bold my-2">Syarifuddin Fakhri A.</div>
       <div class="text-4xl font-semibold my-2">I make everything for various kinds of software</div>
-      <div class="my-2">
+      <div class="my-2 text-lg">
         I'm a software engineer who specializes in building and designing various 
         kinds of software to make great digital experiences. Currently, I'm focuses 
         on finising my thesis and building website for 
-        <span class="text-green-neon">TTL ID</span>.
+        <span class="text-link">
+          <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/">
+            TTL ID
+          </a>
+        </span>.
       </div>
     </section>
-    <section id="about" class="my-12 min-h-[calc(100%-5rem)]">
+    <section id="about" class="pt-20 pb-4 min-h-full">
       <div 
         class="font-bold text-2xl sm:after:w-80 after:w-1/3 after:relative after:block 
         after:bg-night-light after:content-[''] after:h-px after:-top-3.5 after:left-32 
@@ -78,28 +86,25 @@
           </div>
           <div class="my-2">
             I'm a student of Informatics in 
-            <span class="text-green-neon"><a href="https://www.itb.ac.id/">
+            <span class="text-link"><a href="https://www.itb.ac.id/">
               Institut Teknologi Bandung (ITB)
             </a></span>
             and an IT specialist in 
-            <span class="text-green-neon">
-              <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/">
-                TTL ID
-              </a>
+            <span class="text-link">
+              <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/"
+              >TTL ID</a>
             </span> 
             . I spent most of my time to studying  Informatics and making a 
             dancing robot for a National Robotics Contest
           </div>
           <div class="my-2">
             Fast-forward to today, and I’ve had the privilege of working at 
-            <span class="text-green-neon"><a href="https://pajak.io/">Fintax</a></span> 
-            as frontend developer intern. My main responsibility is making interface of 
+            <span class="text-link"><a href="https://pajak.io/">Fintax</a></span> 
+            as junior frontend developer. My main responsibility is making interface of 
             website and integrate with API.
           </div>
           <div class="my-2">
-            <span>
-              Here are a few technologies I’ve been working with recently:
-            </span>
+            Here are a few technologies I’ve been working with recently:
             <ul class="my-2 flex flex-wrap list-disc ml-4 marker:text-green-neon">
               <li class="w-40">Node.js</li>
               <li class="w-40">Vue</li>
@@ -112,29 +117,120 @@
         </div>
       </div>
     </section>
+    <section id="work" class="pt-20 pb-4 min-h-full flex flex-col justify-center">
+      <div 
+        class="font-bold text-2xl sm:after:w-60 after:w-1/5 after:relative after:block 
+        after:bg-night-light after:content-[''] after:h-px after:-top-3.5 after:left-52 
+        text-night-light">
+        Where I've Work
+      </div>
+      <div class="mt-10">
+        <div>
+          <div class="flex justify-center flex-wrap">
+            <div
+              id="btnTtl" 
+              onclick="changeWork('Ttl')"
+              class="w-32 h-8 flex justify-center items-center transition-all duration-500 
+                cursor-pointer text-green-neon hover:text-green-neon hover:bg-navy
+                link-underline link-underline-color link-underline-size"
+            >TTL ID</div>
+            <div
+              id="btnFintax" 
+              onclick="changeWork('Fintax')"
+              class="w-32 h-8 flex justify-center items-center transition-all duration-500 
+                cursor-pointer hover:text-green-neon hover:bg-navy
+                link-underline link-underline-color"
+            >Fintax</div>
+            <div
+              id="btnStei" 
+              onclick="changeWork('Stei')"
+              class="w-32 h-8 flex justify-center items-center transition-all duration-500 
+                cursor-pointer hover:text-green-neon hover:bg-navy
+                link-underline link-underline-color"
+            >STEI ITB</div>
+          </div>
+        </div>
+        <div id="workTtl" class="mt-6 mb-2 flex flex-col items-center">
+          <div class="text-xl font-semibold text-night-light">
+            IT Specialist <span class="text-green-neon">@</span> 
+            <span class="text-link">
+              <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/">
+                TTL ID
+              </a>
+            </span> 
+          </div>
+          <div class="text-sm">August 2020 - Present</div>
+          <div class="mt-2">
+            <ul class="ml-4 list-disc marker:text-green-neon">
+              <li>Produce HTML, CSS, and Javascript for TTL website.</li>
+              <li>Maintenance website.</li>
+              <li>Answer high school or SBMPTN questions from the community.</li>
+            </ul>
+          </div>
+        </div>
+        <div id="workFintax" class="mt-6 mb-2 hidden flex-col items-center">
+          <div class="text-xl font-semibold text-night-light">
+            Junior Frontend Engineer <span class="text-green-neon">@</span> 
+            <span class="text-link"><a href="https://pajak.io/">Fintax</a></span> 
+          </div>
+          <div class="text-sm">April 2021 - April 2022</div>
+          <div class="mt-2">
+            <ul class="ml-4 list-disc marker:text-green-neon">
+              <li>Produce HTML, CSS, and Javascript for tax payment form (Form SPT 1771 SPT Badan) website using VueJS.</li>
+              <li>Integrate API and debug website.</li>
+              <li>Collaborate with backend engineer and system analyst.</li>
+            </ul>
+          </div>
+        </div>
+        <div id="workStei" class="mt-6 mb-2 hidden flex-col items-center">
+          <div class="text-xl font-semibold text-night-light">
+            Developer <span class="text-green-neon">@</span> 
+            <span class="text-link"><a href="https://stei.itb.ac.id/">STEI ITB</a></span> 
+          </div>
+          <div class="text-sm">January 2021 - May 2021</div>
+          <div class="mt-2">
+            <ul class="ml-4 list-disc marker:text-green-neon">
+              <li>Make design for student and alumni service website using Figma</li>
+              <li>Produce HTML, CSS, and Javascript using ReactJS.</li>
+              <li>Produce API using PHP.</li>
+              <li>Make documentation for the whole project using agile method.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="h-20 flex flex-col items-center">
-    <div>Designed & Built by Syarifuddin</div>
+  <footer class="h-20">
+    <a 
+      class="flex flex-col items-center gap-2 mx-auto w-max hover:text-green-neon" 
+      href="https://github.com/sfa119f/Portofolio"
+    >
+      <div>Designed & Built by Syarifuddin</div>
+      <div>
+        <i class="fas fa-star mr-2"></i><span id="starGithub">0</span>
+        <i class="fas fa-code-fork ml-4 mr-2"></i><span id="forkGithub">0</span>
+      </div>
+    </a>
   </footer>
 </body>
 
-<script>
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("navbar").style.top = "0";
-    } else {
-      document.getElementById("navbar").style.top = "-5rem";
-    }
-    prevScrollpos = currentScrollPos;
+<script src="../src/script/controller.js"></script>
+<script src="../src/script/fetch.js"></script>
+<!-- <script type="module">
+  import * as controller from "../src/script/controller.js"
+
+  window.addEventListener('scroll', controller.hideNavbar);
+  
+  const sideNavbar = document.getElementsByClassName('showSideNavbar');
+  for (let i = 0; i < sideNavbar.length; i++) {
+    sideNavbar[i].addEventListener("click", controller.showSideNavbar);
   }
 
-  function showSideNavbar() {
-    const sideNavbar = document.getElementById("sideNavbar")
-    sideNavbar.classList.toggle("fixed")
-    sideNavbar.classList.toggle("hidden")
-  }
+  const workMenu = document.getElementsByClassName('workMenu');
+  console.log(workMenu)
+  for (let i = workMenu.length-1; i >= 0; i--) {
+    workMenu[i].setAttribute("onclick", controller.changeWork(workMenu[i].id))
+  } -->
 </script>
 
 </html>
