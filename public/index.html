@@ -9,16 +9,17 @@
   <link href="./css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" integrity="sha512-uj2QCZdpo8PSbRGL/g5mXek6HM/APd7k/B5Hx/rkVFPNOxAQMXD+t+bG4Zv8OAdUpydZTU3UHmyjjiHv2Ww0PA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css" integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-navy-dark text-night">
   <nav 
     id="navbar" 
     style="top: 0" 
-    class="fixed w-full h-20 bg-navy-dark/[0.9] transition-all duration-500 z-10"
+    class="fixed w-full h-20 bg-navy-dark/90 transition-all duration-500 z-10"
   >
-    <div class="flex items-center justify-between py-6 px-6 md:px-12">
-      <img src="../src/img/logo.png" alt="logo" style="height: 2rem;">
+    <div class="flex items-center justify-between py-2 px-6 md:px-12">
+      <img src="../src/img/logo.png" alt="logo" style="height: 3rem;">
       <div class="hidden md:flex gap-8">
         <a class="hover:text-green-neon" href="#about">About</a>
         <a class="hover:text-green-neon" href="#work">Work</a>
@@ -31,27 +32,88 @@
       </div>
       <div 
         id="sideNavbar" 
-        onclick="showSideNavbar()"
-        class="hidden md:hidden right-0 min-w-fit w-3/5 -top-0.5 h-full py-5 px-6 bg-navy
+        class="hidden md:hidden right-0 min-w-fit w-3/5 top-0 h-full py-5 px-6 bg-navy
           transition-all duration-500"
       >
         <div class="flex flex-col gap-4">
-          <i 
-            class="fas fa-xmark text-green-neon cursor-pointer" 
-            style="font-size: 2rem;" 
-          >
-          </i>
-          <a class="hover:text-green-neon" href="#about">About</a>
-          <a class="hover:text-green-neon" href="#work">Work</a>
-          <a class="hover:text-green-neon" href="#experience">Experience</a>
-          <a class="hover:text-green-neon" href="#contact">Contact</a>
-          <a class="hover:text-green-neon" href="../src/doc/Syarifuddin_CV.pdf" download>Resume</a>
+          <div class="flex mt-2">
+            <i 
+              class="fas fa-xmark text-green-neon cursor-pointer" 
+              style="font-size: 2rem;" 
+              onclick="showSideNavbar()"
+              >
+            </i>
+          </div>
+          <a 
+            onclick="showSideNavbar()" 
+            class="hover:text-green-neon" 
+            href="#about"
+          >About</a>
+          <a 
+            onclick="showSideNavbar()" 
+            class="hover:text-green-neon" 
+            href="#work"
+          >Work</a>
+          <a 
+            onclick="showSideNavbar()" 
+            class="hover:text-green-neon" 
+            href="#experience"
+          >Experience</a>
+          <a 
+            onclick="showSideNavbar()" 
+            class="hover:text-green-neon" 
+            href="#contact"
+          >Contact</a>
+          <a 
+            onclick="showSideNavbar()" 
+            class="hover:text-green-neon" 
+            href="../src/doc/Syarifuddin_CV.pdf" 
+            download
+          >Resume</a>
         </div>
       </div>
     </div>
   </nav>
   <div class="h-20"></div>
-  <main class="top-20 px-6 sm:px-12 md:px-24 xl:px-48 max-w-[1440px] w-full min-h-full mx-auto">
+  <div class="hidden md:block md:fixed bottom-[calc((100%-5rem-496px)/2)] left-6 lg:left-12 w-10">
+    <div 
+      class="flex flex-col items-center gap-5 after:relative after:block after:bg-night-light after:content-[''] after:w-px after:h-40 before:relative before:block before:bg-night-light before:content-[''] before:w-px before:h-40"
+    >
+      <a class="hover:translate-x-0.5 hover:-translate-y-0.5" href="https://github.com/sfa119f">
+        <i 
+          class="fab fa-github text-night-light hover:text-green-neon" 
+          style="font-size: 2rem;"
+        ></i>
+      </a>
+      <a 
+        class="hover:translate-x-0.5 hover:-translate-y-0.5" 
+        href="https://www.linkedin.com/in/syarifuddinfa"
+      >
+        <i 
+          class="fab fa-linkedin text-night-light hover:text-green-neon" 
+          style="font-size: 2rem;"
+        ></i>
+      </a>
+      <a class="hover:translate-x-0.5 hover:-translate-y-0.5" href="https://www.instagram.com/sfa_arf">
+        <i 
+          class="fab fa-instagram text-night-light hover:text-green-neon" 
+          style="font-size: 2rem;"
+        ></i>
+      </a>
+    </div>
+  </div>
+  <div class="hidden md:block md:fixed bottom-[calc((100%-5rem-496px)/2)] right-6 lg:right-12 w-10">
+    <div 
+      class="flex flex-col items-center gap-24 after:relative after:block after:bg-night-light after:content-[''] after:w-px after:h-36 before:relative before:block before:bg-night-light before:content-[''] before:w-px before:h-36"
+    >
+      <a 
+        class="text-night-light rotate-90 hover:text-green-neon 
+          hover:-translate-x-0.5 hover:-translate-y-0.5" 
+        href="mailto:syarifuddinfa@gmail.com"
+      >syarifuddinfa@gmail.com</a>
+    </div>
+  </div>
+  <main class="top-20 px-6 sm:px-12 md:px-24 lg:px-48 max-w-[1440px] w-full min-h-full mx-auto">
     <section id="title" class="pt-4 pb-4 min-h-[calc(100%-5rem)] flex flex-col justify-center">
       <div class="text-lg text-green-neon my-2">Hi everyone! My name is</div>
       <div class="text-5xl text-night-light font-bold my-2">Syarifuddin Fakhri A.</div>
@@ -69,11 +131,9 @@
     </section>
     <section id="about" class="pt-20 pb-4 min-h-full">
       <div 
-        class="font-bold text-2xl sm:after:w-80 after:w-1/3 after:relative after:block 
-        after:bg-night-light after:content-[''] after:h-px after:-top-3.5 after:left-32 
-        text-night-light">
-        About Me
-      </div>
+        class="font-bold text-2xl text-night-light flex items-center gap-5 
+          after:content-[''] after:bg-night-light after:h-px sm:after:w-80 after:w-1/3"
+      >About Me</div>
       <div class="block md:grid md:grid-cols-[2fr_3fr] gap-6 mt-10">
         <div class="w-3/4 m-10 md:my-0 md:mt-2">
           <img src="../src/img/syarifuddin.jpg" alt="syarifuddin-img" width="500" height="500">
@@ -119,12 +179,11 @@
     </section>
     <section id="work" class="pt-20 pb-4 min-h-full flex flex-col justify-center">
       <div 
-        class="font-bold text-2xl sm:after:w-60 after:w-1/5 after:relative after:block 
-        after:bg-night-light after:content-[''] after:h-px after:-top-3.5 after:left-52 
-        text-night-light">
-        Where I've Work
-      </div>
-      <div class="mt-10">
+        class="font-bold text-2xl text-night-light flex items-center gap-5 justify-center
+          after:content-[''] after:bg-night-light after:h-px sm:after:w-1/4 after:w-1/12 
+          before:content-[''] before:bg-night-light before:h-px sm:before:w-1/4 before:w-1/12"
+      >Where I've Work</div>
+      <div class="mt-10 max-w-xl mx-auto">
         <div>
           <div class="flex justify-center flex-wrap">
             <div
@@ -199,10 +258,60 @@
         </div>
       </div>
     </section>
+    <section id="contact" class="py-20 min-h-full flex flex-col justify-center">
+      <div 
+        class="font-bold text-xl text-green-neon flex items-center gap-5 justify-center
+        after:content-[''] after:bg-night-light after:h-px sm:after:w-1/4 after:w-1/12 
+        before:content-[''] before:bg-night-light before:h-px sm:before:w-1/4 before:w-1/12"
+      >Move forward!</div>
+      <div class="mt-10 max-w-xl mx-auto">
+        <div class="text-4xl text-center font-bold text-night-light">Link Up With Me</div>
+        <!-- <div>
+          Although I’m not currently looking for any new opportunities, my inbox 
+          is always open. Whether you say hi or just ask me something, I'll reach 
+          back to you as soon as possible!
+        </div> -->
+        <div class="mt-6 text-center">
+          I'm currently looking for new role opportunities. If my profile matches 
+          or has the latest opportunity information, you can contact me via email. 
+          You can also say hi or just ask me something, I'll reach back to you 
+          as soon as possible!
+        </div>
+        <div class="my-16 flex justify-center">
+          <a class="button">Say Hi!</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="h-20">
+  <footer class="min-h-20">
+    <div class="md:hidden flex gap-5 items-center justify-center my-4">
+      <a href="https://github.com/sfa119f">
+        <i 
+          class="fab fa-github text-night-light hover:text-green-neon" 
+          style="font-size: 2rem;"
+        ></i>
+      </a>
+      <a href="https://www.linkedin.com/in/syarifuddinfa">
+        <i 
+          class="fab fa-linkedin text-night-light hover:text-green-neon" 
+          style="font-size: 2rem;"
+        ></i>
+      </a>
+      <a href="https://www.instagram.com/sfa_arf">
+        <i 
+          class="fab fa-instagram text-night-light hover:text-green-neon" 
+          style="font-size: 2rem;"
+        ></i>
+      </a>
+      <a href="mailto:syarifuddinfa@gmail.com">
+        <i 
+          class="fas fa-envelope text-night-light hover:text-green-neon" 
+          style="font-size: 2rem;"
+        ></i>
+      </a>
+    </div>
     <a 
-      class="flex flex-col items-center gap-2 mx-auto w-max hover:text-green-neon" 
+      class="flex flex-col items-center gap-2 mx-auto w-max hover:text-green-neon my-4" 
       href="https://github.com/sfa119f/Portofolio"
     >
       <div>Designed & Built by Syarifuddin</div>
@@ -216,22 +325,6 @@
 
 <script src="../src/script/controller.js"></script>
 <script src="../src/script/fetch.js"></script>
-<!-- <script type="module">
-  import * as controller from "../src/script/controller.js"
-
-  window.addEventListener('scroll', controller.hideNavbar);
-  
-  const sideNavbar = document.getElementsByClassName('showSideNavbar');
-  for (let i = 0; i < sideNavbar.length; i++) {
-    sideNavbar[i].addEventListener("click", controller.showSideNavbar);
-  }
-
-  const workMenu = document.getElementsByClassName('workMenu');
-  console.log(workMenu)
-  for (let i = workMenu.length-1; i >= 0; i--) {
-    workMenu[i].setAttribute("onclick", controller.changeWork(workMenu[i].id))
-  } -->
-</script>
 
 </html>
 

@@ -6,6 +6,9 @@
   .text-link {
     @apply text-green-neon cursor-pointer link-underline link-underline-color hover:link-underline-size
   }
+  .button {
+    @apply px-6 py-4 font-semibold text-green-neon border-2 rounded border-green-neon hover:bg-green-neon/[0.15]
+  }
 
   .link-underline {
     border-bottom-width: 0;
