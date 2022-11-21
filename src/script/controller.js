@@ -37,3 +37,24 @@ function changeWork(id) {
 
   prevWorkId = id;
 }
+
+// Change work navigation
+let prevOrgId = "Uro";
+function changeOrg(id) {
+  const prevBtnOrg = document.getElementById("btn" + prevOrgId);
+  const btnOrg = document.getElementById("btn" + id);
+  const prevElOrg = document.getElementById("org" + prevOrgId);
+  const elOrg = document.getElementById("org" + id);
+
+  prevBtnOrg.classList.toggle("text-green-neon");
+  prevBtnOrg.classList.toggle("link-underline-size");
+  btnOrg.classList.toggle("text-green-neon");
+  btnOrg.classList.toggle("link-underline-size");
+
+  prevElOrg.classList.toggle("flex");
+  prevElOrg.classList.toggle("hidden");
+  elOrg.classList.toggle("flex");
+  elOrg.classList.toggle("hidden");
+
+  prevOrgId = id;
+}

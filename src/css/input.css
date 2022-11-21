@@ -7,7 +7,29 @@
     @apply text-green-neon cursor-pointer link-underline link-underline-color hover:link-underline-size
   }
   .button {
-    @apply px-6 py-4 font-semibold text-green-neon border-2 rounded border-green-neon hover:bg-green-neon/[0.15]
+    @apply px-6 py-4 font-semibold text-green-neon border-2 rounded 
+      border-green-neon hover:bg-green-neon/[0.15]
+  }
+  .button-menu {
+    @apply w-32 h-8 flex justify-center items-center transition-all duration-500 cursor-pointer
+    hover:text-green-neon hover:bg-navy link-underline link-underline-color
+  }
+  .line-beside-text {
+    @apply flex gap-5 items-center justify-center
+      after:content-[''] after:bg-night-light after:h-px sm:after:w-1/4 after:w-1/12 
+      before:content-[''] before:bg-night-light before:h-px sm:before:w-1/4 before:w-1/12
+  }
+  table thead tr td {
+    @apply p-2 font-bold text-lg
+  }
+  table tbody tr td {
+    @apply p-2 font-bold text-night-light
+  }
+  table tbody tr:nth-child(odd) {
+    @apply bg-navy
+  }
+  table tbody .sec-cell {
+    @apply font-medium text-night
   }
 
   .link-underline {

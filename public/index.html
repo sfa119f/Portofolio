@@ -15,20 +15,19 @@
 <body class="bg-navy-dark text-night">
   <nav 
     id="navbar" 
-    style="top: 0" 
     class="fixed w-full h-20 bg-navy-dark/90 transition-all duration-500 z-10"
   >
     <div class="flex items-center justify-between py-2 px-6 md:px-12">
-      <img src="../src/img/logo.png" alt="logo" style="height: 3rem;">
+      <img src="../src/img/logo.png" alt="logo" class="h-12">
       <div class="hidden md:flex gap-8">
         <a class="hover:text-green-neon" href="#about">About</a>
         <a class="hover:text-green-neon" href="#work">Work</a>
         <a class="hover:text-green-neon" href="#experience">Experience</a>
         <a class="hover:text-green-neon" href="#contact">Contact</a>
-        <a class="hover:text-green-neon" href="">Resume</a>
+        <a class="hover:text-green-neon" href="../src/doc/Syarifuddin_CV.pdf" download>Resume</a>
       </div>
       <div onclick="showSideNavbar()" class="md:hidden cursor-pointer" >
-        <i class="fas fa-bars text-green-neon" style="font-size: 2rem;"></i>
+        <i class="fas fa-bars text-green-neon text-4xl"></i>
       </div>
       <div 
         id="sideNavbar" 
@@ -38,8 +37,7 @@
         <div class="flex flex-col gap-4">
           <div class="flex mt-2">
             <i 
-              class="fas fa-xmark text-green-neon cursor-pointer" 
-              style="font-size: 2rem;" 
+              class="fas fa-xmark text-green-neon cursor-pointer text-4xl"
               onclick="showSideNavbar()"
               >
             </i>
@@ -77,34 +75,29 @@
   <div class="h-20"></div>
   <div class="hidden md:block md:fixed bottom-[calc((100%-5rem-496px)/2)] left-6 lg:left-12 w-10">
     <div 
-      class="flex flex-col items-center gap-5 after:relative after:block after:bg-night-light after:content-[''] after:w-px after:h-40 before:relative before:block before:bg-night-light before:content-[''] before:w-px before:h-40"
+      class="flex flex-col items-center gap-5 after:relative after:block after:bg-night-light 
+        after:content-[''] after:w-px after:h-40 before:relative before:block before:bg-night-light 
+        before:content-[''] before:w-px before:h-40"
     >
       <a class="hover:translate-x-0.5 hover:-translate-y-0.5" href="https://github.com/sfa119f">
-        <i 
-          class="fab fa-github text-night-light hover:text-green-neon" 
-          style="font-size: 2rem;"
-        ></i>
+        <i class="fab fa-github text-night-light hover:text-green-neon text-4xl"></i>
       </a>
       <a 
         class="hover:translate-x-0.5 hover:-translate-y-0.5" 
         href="https://www.linkedin.com/in/syarifuddinfa"
       >
-        <i 
-          class="fab fa-linkedin text-night-light hover:text-green-neon" 
-          style="font-size: 2rem;"
-        ></i>
+        <i class="fab fa-linkedin text-night-light hover:text-green-neon text-4xl"></i>
       </a>
       <a class="hover:translate-x-0.5 hover:-translate-y-0.5" href="https://www.instagram.com/sfa_arf">
-        <i 
-          class="fab fa-instagram text-night-light hover:text-green-neon" 
-          style="font-size: 2rem;"
-        ></i>
+        <i class="fab fa-instagram text-night-light hover:text-green-neon text-4xl"></i>
       </a>
     </div>
   </div>
   <div class="hidden md:block md:fixed bottom-[calc((100%-5rem-496px)/2)] right-6 lg:right-12 w-10">
     <div 
-      class="flex flex-col items-center gap-24 after:relative after:block after:bg-night-light after:content-[''] after:w-px after:h-36 before:relative before:block before:bg-night-light before:content-[''] before:w-px before:h-36"
+      class="flex flex-col items-center gap-24 after:relative after:block after:bg-night-light 
+      after:content-[''] after:w-px after:h-36 before:relative before:block before:bg-night-light 
+      before:content-[''] before:w-px before:h-36"
     >
       <a 
         class="text-night-light rotate-90 hover:text-green-neon 
@@ -117,8 +110,8 @@
     <section id="title" class="pt-4 pb-4 min-h-[calc(100%-5rem)] flex flex-col justify-center">
       <div class="text-lg text-green-neon my-2">Hi everyone! My name is</div>
       <div class="text-5xl text-night-light font-bold my-2">Syarifuddin Fakhri A.</div>
-      <div class="text-4xl font-semibold my-2">I make everything for various kinds of software</div>
-      <div class="my-2 text-lg">
+      <div class="text-4xl font-semibold my-2">I'm a technology enthusiast especially in software</div>
+      <div class="my-2">
         I'm a software engineer who specializes in building and designing various 
         kinds of software to make great digital experiences. Currently, I'm focuses 
         on finising my thesis and building website for 
@@ -129,16 +122,13 @@
         </span>.
       </div>
     </section>
-    <section id="about" class="pt-20 pb-4 min-h-full">
-      <div 
-        class="font-bold text-2xl text-night-light flex items-center gap-5 
-          after:content-[''] after:bg-night-light after:h-px sm:after:w-80 after:w-1/3"
-      >About Me</div>
+    <section id="about" class="pt-20 pb-4 min-h-full flex flex-col justify-center">
+      <div class="font-bold text-2xl text-night-light line-beside-text">Who Am I?</div>
       <div class="block md:grid md:grid-cols-[2fr_3fr] gap-6 mt-10">
         <div class="w-3/4 m-10 md:my-0 md:mt-2">
           <img src="../src/img/syarifuddin.jpg" alt="syarifuddin-img" width="500" height="500">
         </div>
-        <div class="text-lg">
+        <div>
           <div class="my-2">
             Hi! My name is Syarifuddin and I enjoy learning and creating something 
             related to digital information technology. My interest in IT started in 
@@ -167,8 +157,8 @@
             Here are a few technologies I’ve been working with recently:
             <ul class="my-2 flex flex-wrap list-disc ml-4 marker:text-green-neon">
               <li class="w-40">Node.js</li>
-              <li class="w-40">Vue</li>
-              <li class="w-40">React</li>
+              <li class="w-40">Vue.js</li>
+              <li class="w-40">React.js</li>
               <li class="w-40">Go</li>
               <li class="w-40">Flutter</li>
               <li class="w-40">Python</li>
@@ -178,36 +168,24 @@
       </div>
     </section>
     <section id="work" class="pt-20 pb-4 min-h-full flex flex-col justify-center">
-      <div 
-        class="font-bold text-2xl text-night-light flex items-center gap-5 justify-center
-          after:content-[''] after:bg-night-light after:h-px sm:after:w-1/4 after:w-1/12 
-          before:content-[''] before:bg-night-light before:h-px sm:before:w-1/4 before:w-1/12"
-      >Where I've Work</div>
+      <div class="font-bold text-2xl text-night-light line-beside-text">Where I've Work</div>
       <div class="mt-10 max-w-xl mx-auto">
-        <div>
-          <div class="flex justify-center flex-wrap">
-            <div
-              id="btnTtl" 
-              onclick="changeWork('Ttl')"
-              class="w-32 h-8 flex justify-center items-center transition-all duration-500 
-                cursor-pointer text-green-neon hover:text-green-neon hover:bg-navy
-                link-underline link-underline-color link-underline-size"
-            >TTL ID</div>
-            <div
-              id="btnFintax" 
-              onclick="changeWork('Fintax')"
-              class="w-32 h-8 flex justify-center items-center transition-all duration-500 
-                cursor-pointer hover:text-green-neon hover:bg-navy
-                link-underline link-underline-color"
-            >Fintax</div>
-            <div
-              id="btnStei" 
-              onclick="changeWork('Stei')"
-              class="w-32 h-8 flex justify-center items-center transition-all duration-500 
-                cursor-pointer hover:text-green-neon hover:bg-navy
-                link-underline link-underline-color"
-            >STEI ITB</div>
-          </div>
+        <div class="flex flex-wrap justify-center gap-2">
+          <div
+            id="btnTtl" 
+            onclick="changeWork('Ttl')"
+            class="button-menu text-green-neon link-underline-size"
+          >TTL ID</div>
+          <div
+            id="btnFintax" 
+            onclick="changeWork('Fintax')"
+            class="button-menu"
+          >Fintax</div>
+          <div
+            id="btnStei" 
+            onclick="changeWork('Stei')"
+            class="button-menu"
+          >STEI ITB</div>
         </div>
         <div id="workTtl" class="mt-6 mb-2 flex flex-col items-center">
           <div class="text-xl font-semibold text-night-light">
@@ -218,8 +196,8 @@
               </a>
             </span> 
           </div>
-          <div class="text-sm">August 2020 - Present</div>
-          <div class="mt-2">
+          <div class="text-sm">August 2020 – Present</div>
+          <div class="mt-4">
             <ul class="ml-4 list-disc marker:text-green-neon">
               <li>Produce HTML, CSS, and Javascript for TTL website.</li>
               <li>Maintenance website.</li>
@@ -232,8 +210,8 @@
             Junior Frontend Engineer <span class="text-green-neon">@</span> 
             <span class="text-link"><a href="https://pajak.io/">Fintax</a></span> 
           </div>
-          <div class="text-sm">April 2021 - April 2022</div>
-          <div class="mt-2">
+          <div class="text-sm">April 2021 – April 2022</div>
+          <div class="mt-4">
             <ul class="ml-4 list-disc marker:text-green-neon">
               <li>Produce HTML, CSS, and Javascript for tax payment form (Form SPT 1771 SPT Badan) website using VueJS.</li>
               <li>Integrate API and debug website.</li>
@@ -246,8 +224,8 @@
             Developer <span class="text-green-neon">@</span> 
             <span class="text-link"><a href="https://stei.itb.ac.id/">STEI ITB</a></span> 
           </div>
-          <div class="text-sm">January 2021 - May 2021</div>
-          <div class="mt-2">
+          <div class="text-sm">January 2021 – May 2021</div>
+          <div class="mt-4">
             <ul class="ml-4 list-disc marker:text-green-neon">
               <li>Make design for student and alumni service website using Figma</li>
               <li>Produce HTML, CSS, and Javascript using ReactJS.</li>
@@ -258,12 +236,257 @@
         </div>
       </div>
     </section>
+    <section id="experience" class="pt-20 pb-4 min-h-full flex flex-col justify-center">
+      <div class="font-bold text-2xl text-night-light line-beside-text">Something I've Done</div>
+      <div id="projects" class="mt-10">
+        <div class="font-bold text-xl text-night-light underline">Own Projects</div>
+        <div class="mt-4">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <td>Year</td>
+                <td>Title</td>
+                <td class="sm-max:hidden">Built with</td>
+                <td>Link</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2022</td>
+                <td>Gojek Imitation</td>
+                <td class="sec-cell sm-max:hidden">React Native</td>
+                <td class="sec-cell">
+                  <a href="https://github.com/sfa119f/GojekImitation">
+                    <i class="fas fa-link hover:text-green-neon text-lg"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>2022</td>
+                <td>Login Mobile</td>
+                <td class="sec-cell sm-max:hidden">Flutter, Reqres.in API</td>
+                <td class="sec-cell">
+                  <a href="https://github.com/sfa119f/login_flutter">
+                    <i class="fas fa-link hover:text-green-neon text-lg"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>2022</td>
+                <td>Web UMKM</td>
+                <td class="sec-cell sm-max:hidden">
+                  PostreSQL, Express.js, Vue.js, Node.js, TailwindCSS
+                </td>
+                <td class="sec-cell">
+                  <a href="https://github.com/sfa119f/web-umkm">
+                    <i class="fas fa-link hover:text-green-neon text-lg"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>2022</td>
+                <td>KTM x Money</td>
+                <td class="sec-cell sm-max:hidden">
+                  MySQL, Express.js, MQTT, HTML, Node.js, Arduino IDE, ESP32, RFID
+                </td>
+                <td class="sec-cell">
+                  <a href="https://github.com/sfa119f/if4051-project-iot">
+                    <i class="fas fa-link hover:text-green-neon text-lg"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>2021</td>
+                <td>Project TGTC (Backend)</td>
+                <td class="sec-cell sm-max:hidden">PostreSQL, Go</td>
+                <td class="sec-cell">
+                  <a href="https://github.com/sfa119f/project-TGTC-Team2">
+                    <i class="fas fa-link hover:text-green-neon text-lg"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>2021</td>
+                <td>Vue Project</td>
+                <td class="sec-cell sm-max:hidden">Vue.js, Reqres.in API</td>
+                <td class="sec-cell">
+                  <a href="https://github.com/sfa119f/vue-project">
+                    <i class="fas fa-link hover:text-green-neon text-lg"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="my-8 flex justify-center">
+            <a href="https://github.com/sfa119f" class="button">Show More</a>
+          </div>
+        </div>
+      </div>
+      <div id="organaizations" class="mt-10 min-h-[376px]">
+        <div class="font-bold text-xl text-night-light underline">Organizations</div>
+        <div class="mt-4 max-w-xl mx-auto">
+          <div class="flex flex-wrap justify-center gap-2 max-w-md mx-auto">
+            <div
+              id="btnUro" 
+              onclick="changeOrg('Uro')"
+              class="button-menu text-green-neon link-underline-size"
+            >URO</div>
+            <div
+              id="btnWbs20" 
+              onclick="changeOrg('Wbs20')"
+              class="button-menu"
+            >WBS'20</div>
+            <div
+              id="btnOskm19" 
+              onclick="changeOrg('Oskm19')"
+              class="button-menu"
+            >OSKM'19</div>
+            <div
+              id="btnWbs19" 
+              onclick="changeOrg('Wbs19')"
+              class="button-menu"
+            >WBS'19</div>
+            <div
+              id="btnRohis" 
+              onclick="changeOrg('Rohis')"
+              class="button-menu"
+            >Rohis</div>
+          </div>
+          <div id="orgUro" class="mt-6 mb-2 flex flex-col items-center">
+            <div class="text-xl font-semibold text-night-light">
+              Member 
+              <span class="text-green-neon">@ Unit Robotika ITB</span>
+            </div>
+            <div class="text-sm">August 2019 – Present</div>
+            <div class="mt-4">
+              <ul class="ml-4 list-disc marker:text-green-neon">
+                <li>Research, make, update, and maintenance programs for dance robot.</li>
+                <li>Research and maintenance electrical components for dance robot.</li>
+                <li>Plan and make dance robot movement with the stop motion method.</li>
+              </ul>
+            </div>
+          </div>
+          <div id="orgWbs20" class="mt-6 mb-2 hidden flex-col items-center">
+            <div class="text-xl font-semibold text-night-light">
+              Chief executive 
+              <span class="text-green-neon">@ Widyakelana Back To School 2020</span>
+              </span> 
+            </div>
+            <div class="text-sm">June 2019 – February 2020</div>
+            <div class="mt-4">
+              <ul class="ml-4 list-disc marker:text-green-neon">
+                <li>Project manager of school tour and try-out event.</li>
+                <li>Initiate, plan, execute, monitor, and close more than 20 school tours 
+                  to introduce about college.</li>
+                <li>Initiate, plan, execute, monitor, and close try-out SBMPTN event with 
+                  more than 500 participants.</li>
+                <li>Coordinate, supervise, and monitor multiple fields in organization.</li>
+              </ul>
+            </div>
+          </div>
+          <div id="orgOskm19" class="mt-6 mb-2 hidden flex-col items-center">
+            <div class="text-xl font-semibold text-night-light">
+              Event Organizer Staff 
+              <span class="text-green-neon">@ OSKM ITB</span>
+            </div>
+            <div class="text-sm">June 2019 – August 2019</div>
+            <div class="mt-4">
+              <ul class="ml-4 list-disc marker:text-green-neon">
+                <li>Maintenance event before, during, and after Orientasi Studi Keluarga 
+                  Mahasiswa (OSKM) ITB 2019.</li>
+                <li>Managing study orientation and faculty introduction, especially 
+                  Fakultas Teknik Sipil dan Lingkungan (FTSL) ITB.</li>
+                <li>Collaborate with around 30 mentors to supervise mentoring activity.</li>
+                <li>Manage the inflow and outflow of students during events at Sasana 
+                  Budaya Ganesha (Sabuga) ITB.</li>
+              </ul>
+            </div>
+          </div>
+          <div id="orgWbs19" class="mt-6 mb-2 hidden flex-col items-center">
+            <div class="text-xl font-semibold text-night-light">
+              Ticketing Staff 
+              <span class="text-green-neon">@ Widyakelana Back To School 2019</span>
+              </span> 
+            </div>
+            <div class="text-sm">September 2018 – February 2019</div>
+            <div class="mt-4">
+              <ul class="ml-4 list-disc marker:text-green-neon">
+                <li>Monitor and maintenance registration try-out SBMPTN website.</li>
+                <li>Promote school tour and try-out event.</li>
+                <li>Plan, execute, and monitor system for re-registration.</li>
+              </ul>
+            </div>
+          </div>
+          <div id="orgRohis" class="mt-6 mb-2 hidden flex-col items-center">
+            <div class="text-xl font-semibold text-night-light">
+              Vice Chairman 
+              <span class="text-green-neon">@ Majelis Kerohanian Islam Senior High School</span>
+            </div>
+            <div class="text-sm">August 2016 – August 2017</div>
+            <div class="mt-4">
+              <ul class="ml-4 list-disc marker:text-green-neon">
+                <li>Coordinate, supervise, and monitor multiple fields in organization, 
+                  especially in internal management.</li>
+                <li>Initiate, plan, execute, monitor, and close more than 5 event.</li>
+                <li>Mediation every meeting and coordination.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="awards" class="mt-10">
+        <div class="font-bold text-xl text-night-light underline">Honors and Awards</div>
+        <div class="mt-4">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <td>Year</td>
+                <td>Title</td>
+                <td>Event</td>
+                <td class="sm-max:hidden">Organizer</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2021</td>
+                <td>3rd winner</td>
+                <td>Tokopedia Goes To Campus x Project</td>
+                <td class="sec-cell sm-max:hidden">
+                  Tokopedia
+                </td>
+              </tr>
+              <tr>
+                <td>2020</td>
+                <td>Finalist</td>
+                <td>Kontes Robot Seni Tari Indonesia</td>
+                <td class="sec-cell sm-max:hidden">
+                  Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
+                </td>
+              </tr>
+              <tr>
+                <td>2017</td>
+                <td>3rd winner</td>
+                <td>IT-Venture</td>
+                <td class="sec-cell sm-max:hidden">
+                  Universitas Sebelas Maret
+                </td>
+              </tr>
+              <tr>
+                <td>2017</td>
+                <td>2nd winner</td>
+                <td>Computer Olympiad region Surakarta</td>
+                <td class="sec-cell sm-max:hidden">
+                    Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
     <section id="contact" class="py-20 min-h-full flex flex-col justify-center">
       <div 
-        class="font-bold text-xl text-green-neon flex items-center gap-5 justify-center
-        after:content-[''] after:bg-night-light after:h-px sm:after:w-1/4 after:w-1/12 
-        before:content-[''] before:bg-night-light before:h-px sm:before:w-1/4 before:w-1/12"
-      >Move forward!</div>
+        class="font-bold text-xl text-green-neon line-beside-text">Move forward!</div>
       <div class="mt-10 max-w-xl mx-auto">
         <div class="text-4xl text-center font-bold text-night-light">Link Up With Me</div>
         <!-- <div>
@@ -278,7 +501,7 @@
           as soon as possible!
         </div>
         <div class="my-16 flex justify-center">
-          <a class="button">Say Hi!</a>
+          <a href="mailto:syarifuddinfa@gmail.com" class="button">Say Hi!</a>
         </div>
       </div>
     </section>
@@ -286,28 +509,16 @@
   <footer class="min-h-20">
     <div class="md:hidden flex gap-5 items-center justify-center my-4">
       <a href="https://github.com/sfa119f">
-        <i 
-          class="fab fa-github text-night-light hover:text-green-neon" 
-          style="font-size: 2rem;"
-        ></i>
+        <i class="fab fa-github text-night-light hover:text-green-neon text-4xl"></i>
       </a>
       <a href="https://www.linkedin.com/in/syarifuddinfa">
-        <i 
-          class="fab fa-linkedin text-night-light hover:text-green-neon" 
-          style="font-size: 2rem;"
-        ></i>
+        <i class="fab fa-linkedin text-night-light hover:text-green-neon text-4xl"></i>
       </a>
       <a href="https://www.instagram.com/sfa_arf">
-        <i 
-          class="fab fa-instagram text-night-light hover:text-green-neon" 
-          style="font-size: 2rem;"
-        ></i>
+        <i class="fab fa-instagram text-night-light hover:text-green-neon text-4xl"></i>
       </a>
       <a href="mailto:syarifuddinfa@gmail.com">
-        <i 
-          class="fas fa-envelope text-night-light hover:text-green-neon" 
-          style="font-size: 2rem;"
-        ></i>
+        <i class="fas fa-envelope text-night-light hover:text-green-neon text-4xl"></i>
       </a>
     </div>
     <a 

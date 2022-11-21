@@ -12,6 +12,9 @@ module.exports = {
         night: "#90A4AE",
         "night-dark": "#607D8B",
       },
+      screens: {
+        "sm-max": { max: "767px" },
+      },
     },
   },
   plugins: [],
